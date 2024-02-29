@@ -10,8 +10,6 @@ export default function Search({ placeholder }: { placeholder: string }) {
   const { replace } = useRouter();
 
   const handleSearch = useDebouncedCallback((term) => {
-    console.log(`Searching... ${term}`);
-   
     //manipulation de l'URL
     const params = new URLSearchParams(searchParams);
     params.set('page', '1'); // reset the page number to 1 when a new search term is entered.
